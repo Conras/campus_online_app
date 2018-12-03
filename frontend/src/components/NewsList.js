@@ -10,12 +10,18 @@ class NewsList extends Component {
 		super(props);
 
 		this.state = {
-			list: []
-		}
+			list: [],
+			item: props.item,
+			key: props.id
+		};
 	}
 
 	componentWillReceiveProps(nextProps) {
-		this.setState({ list: nextProps.list });
+		this.setState({
+			 list: nextProps.list,
+			 item: nextProps.item,
+			 key: nextProps.id
+		});
 	}
 
 	componentDidMount(){

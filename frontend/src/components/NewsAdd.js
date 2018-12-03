@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import {Link, Redirect} from 'react-router-dom'
 import axios from 'axios';
+import moment from 'moment'
+import NewsList from './NewsList';
 
 import NewsItem from './NewsItem';
 
@@ -14,7 +16,7 @@ class NewsAdd extends Component {
 			key: null,
 			valid: false,
 			item: {},
-			redirect: false
+			redirect: false,
 		}
 	}
 
@@ -102,7 +104,7 @@ class NewsAdd extends Component {
 					<form onSubmit={this.handleNewsAdd}>
 						<p> <Link className="btn" to='/'>Home</Link> </p>
 						<h3>Titulo</h3>
-						<input type="text" placeholder="Título da notícia" name="titulo" onChange={this.handleItem}/>
+						<input className="upper" type="text" placeholder="Título da notícia" name="titulo" onChange={this.handleItem}/>
 						<h3 hidden>Resumo</h3>
 						<textarea hidden rows="4" cols="50" placeholder="resumo" name="resumo" onChange={this.handleItem}/>
 						<h3>Texto</h3>
@@ -118,6 +120,10 @@ class NewsAdd extends Component {
 							<h3>Link Foto</h3>
 							<p>O link deve ser no formato i.imgur.com/XXXXXXXX.XXX</p>
 							https://<input type="text" placeholder="Foto" name="link_imagem" onChange={this.handleItem}/>
+						</div>
+						<div id="nome_autor">
+							<h3>Nome do Autor</h3>
+							<input type="text" placeholder="Nome do Autor" name="nome_autor" onChange={this.handleItem}></input>
 						</div>
 						{/* <h3>Link Audio</h3>
 						<input type="text" placeholder="Áudio" name="link_audio" onChange={this.handleItem}/> */}
@@ -135,5 +141,6 @@ class NewsAdd extends Component {
 		}
 	}
 };
+
 
 export default NewsAdd;

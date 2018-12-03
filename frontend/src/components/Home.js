@@ -68,7 +68,7 @@ class Home extends Component {
 
     axios.get(url).then(
       res => {
-        // console.log("Home", res.data.response);
+    ;    // console.log("Home", res.data.response);
         this.setState({newsList: []});
         this.setState({newsList: res.data.response});
       }, 

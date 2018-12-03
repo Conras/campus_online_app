@@ -1,8 +1,9 @@
 ﻿import React, { Component } from 'react';
 import {Link} from 'react-router-dom'
 
-import logo from '../Logo-Campus.png';
+import logo from '../Logo-Campus1.png';
 import '../style/App.css';
+
 
 class Header extends Component {
 
@@ -30,7 +31,7 @@ class Header extends Component {
       <div className="app">
         <header>
           <nav id="sidenav">
-            <a href="" className="closebtn" onClick={e => {e.preventDefault();this.closeNav()}}>&times;</a>
+            <a href="" className="closebtn" onClick={e => {e.preventDefault();this.closeNav()}}><i class='material-icons'>cancel</i></a>
             
             <p>Plataformas do<br />Campus Online<br />
               <a href="http://campus.fac.unb.br/" onClick={this.closeNav}>Site</a>
@@ -50,8 +51,9 @@ class Header extends Component {
             <br/><br/>
             <p> <Link to='/addnews' onClick={this.closeNav}>Adicionar notícias</Link> </p>
           </nav>
-            
-          <span id="opensidenav" className="burger" onClick={this.openNav}>&#9776;</span>
+          
+          <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"></link>
+          <span id="opensidenav" className="burger" onClick={this.openNav}><i class='material-icons'>menu</i></span>
         	<link rel="manifest" href="/manifest.json"></link>
 
         </header>
@@ -59,7 +61,6 @@ class Header extends Component {
         <div className="app-header">
           <img src={logo} className="app-logo" alt="logo" />
         </div>
-
         <footer>
           <h4>2018 FAC/CIC</h4>
         </footer>

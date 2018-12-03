@@ -1,7 +1,7 @@
 .newsItem {
-	background-color: #fff;
+	background-color: white;
 	padding: 25px;
-	border-color: #151515;
+	border-color: #282828;
 	border-width: 0px 0px 1px 0px;
 	border-style: solid;
 }
@@ -9,20 +9,26 @@
 /* .newsItem:hover {
 	background-color: #eee;
 } */
-
+p {
+	font-family: 'IBM Plex Sans', sans-serif;
+}
+.upper {
+	text-transform: uppercase;
+}
 .media {
 	height: fit-content;
 	/* max-height: 125px; */
-	background-color: #0001;
+	background-color: #e8e8e8;
 	margin-bottom: 5px;
 	display: flex;
 	justify-content: center;
 }
 
 .headline {
+	font-family: 'Lato', sans-serif;
 	font-size: 20px;
 	font-weight: bold;
-	color: #6c0318;
+	color: #942832;
 }
 
 .adtInfo {
@@ -61,12 +67,18 @@
 
 .link {
 	display: inline-block;
-	background-color: #f9c19a;
-	border-radius: 5px;
+	border: 3px solid #de8d2e;
+	border-radius: 10px;
 	margin-top: 15px;
 	padding: 7px;
 	font-weight: bold;
 	color: #6c0318;
 	text-decoration: none;
+	transition-duration: 0.3s;
+    cursor: pointer;
 	font-size: 80%;
+}
+
+.link:hover {
+	background-color: #de8d2e;
 }

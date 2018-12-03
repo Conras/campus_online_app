@@ -1,102 +1,119 @@
 .app {
-  text-align: center;
-  --color-1: #6c0318;
-  --color-2: #b5202e;
-  --color-3: #ff9000;
-  --color-4: #f9c19a;
+    text-align: center;
+ --color-1: #6c0318;
+ --color-2: #b5202e;
+ --color-3: #ff9000;
+ --color-4: #f9c19a;
 }
-
 .app-header {
-  height: fit-content;
-  width: 100%;
-  background-color: #6c0318;
-  margin-bottom: 10px;
+    height: fit-content;
+    width: 100%;
+    background-color: #6c0318;
+    margin-bottom: 10px;
 }
-
 .app-logo {
-  width: 80%;
-  padding: 15px 0px;
+    width: 80%;
+    padding: 15px 0px;
 }
-
 .app-title {
-  padding-top: 10px;
-  font-weight: bold;
+    padding-top: 10px;
+    font-weight: bold;
 }
-
 #calendar-region {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
-
 nav {
-  height: 100%;
-  width: 250px;
-  position: fixed;
-  z-index: 1;
-  top: 0;
-  left: 0;
-  background-color: #6c0318;
-  overflow-x: hidden;
-  transition: 0.5s;
-  padding-top: 40px;
-  transform: translateX(-250px);
-  z-index: 100;
+    height: 100%;
+    width: 250px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #6c0318;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 40px;
+    transform: translateX(-250px);
+    z-index: 100;
 }
 
 header {
-  backface-visibility: hidden;
+    backface-visibility: hidden;
 }
 
 nav p {
-  text-decoration: none;
-  font-size: 20px;
-  color: #777777;
-  display: block;
-}
-
-nav a {
-  padding-bottom: 5px;
-  text-decoration: none;
-  font-size: 25px;
-  color: #f9c19a;
-  display: block;
-  transition: 0.3s;
-}
-
-nav a:hover {
-  color: #f1f1f1;
+	text-decoration: none;
+    font-size: 20px;
+    color: #e8e8e8;
+    display: block;
 }
 
 nav .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
+	position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 25px;
+}
+
+nav .closebtn:hover {
+	color: #e8e8e8;
+	background-color: #6c0318;
+	box-shadow: 0px 0px 0px;
+}
+
+nav a {
+	padding: 2px;
+    padding-bottom: 5px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #de8d2e;
+    display: block;
+    transition: 0.3s;
+	font-weight: lighter;
+	text-align: left;		
+	text-indent: 1em;
+}
+
+nav a:hover {
+    color: #6c0318;
+	background-color: #e8e8e8;
+	font-weight: normal;
+	box-shadow: 0px 3px 10px;
 }
 
 .burger {
-  font-size:30px;
-  cursor:pointer;
+    font-size: 30px;
+    cursor: pointer;
 }
 
 .calendar-button {
-  padding: 5px;
-  margin: 5px;
-  border: 0;
-  border-radius: 4px;
-  background-color: #6c0318;
-  color: #fff;
+    padding: 1px;
+    padding-right: 10px;
+    padding-left: 10px;
+	background-color: white;
+    border: 3px solid #942832;
+    border-radius: 10px;
+    color: #942832;
+    transition-duration: 0.3s;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.calendar-button:hover {
+    background-color: #942832;
+    color: white;
 }
 
 footer {
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  width: 100%;
-  background-color: #6c0318;
-  color: white;
-  text-align: left;
-  padding-left: 5px;
-  z-index: 2;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #6c0318;
+    color: white;
+    text-align: left;
+    padding-left: 20px;
+    z-index: 2;
 }

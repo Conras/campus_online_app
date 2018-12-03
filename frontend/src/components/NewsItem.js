@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import { Imagem, Video, Audio } from './Media';
-import moment from 'moment';
-
+import moment, { now } from 'moment';
+import 'moment/locale/pt-br'
 import '../style/NewsItem.css';
-
+moment.locale('pt-br');
 class NewsItem extends Component {
 	constructor(props) {
 		super(props);
@@ -28,10 +28,12 @@ class NewsItem extends Component {
 	render() {
 		return (
 			<div className="newsItem">
-				<div className="headline">{this.state.item.titulo}</div>
+				<div className="headline upper">{this.state.item.titulo}</div>
 				<div className="adtInfo">
 					<div className="timestamp"> {moment(this.state.item.data).format("DD/MM/YY - HH:mm:ss")} </div>
+					<div className="timestamp"> {moment(this.state.item.data).fromNow()}</div>
 				</div>
+				<div className="adtInfo"><p>{this.state.item.nome_autor}</p></div>
 				<div className="media">
 					<Video link={this.state.item.link_video} />
 					<Imagem link={this.state.item.link_imagem} />
